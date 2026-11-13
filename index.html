@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gautam Surani · AI & Full-Stack Product Engineer</title>
+<meta name="description" content="Product-minded AI & full-stack engineer with 9+ years building web, mobile and AI products. Flutter, React Native, React, Python, Node.js.">
+<meta property="og:title" content="Gautam Surani · AI & Full-Stack Product Engineer">
+<meta property="og:description" content="Outcomes, not just code. 9+ years building web, mobile and AI products.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230b0d12'/><text x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial' font-weight='700' font-size='30' fill='%237cf5c4'>GS</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0d12; --bg2:#11141b; --card:#151924; --line:#232838;
+  --text:#e8ebf2; --muted:#9aa3b5; --accent:#7cf5c4; --accent2:#7c9cff;
+  --grad:linear-gradient(120deg,var(--accent),var(--accent2));
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+.mono{font-family:"JetBrains Mono",monospace}
+
+/* nav */
+nav{position:sticky;top:0;z-index:10;background:rgba(11,13,18,.75);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:800;letter-spacing:-.02em;font-size:18px}
+.logo span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.links{display:flex;gap:26px;font-size:14px;color:var(--muted)}
+.links a:hover{color:var(--text)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:10px;font-weight:600;font-size:14px;transition:.2s}
+.btn-primary{background:var(--grad);color:#0b0d12}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 30px -10px rgba(124,245,196,.5)}
+.btn-ghost{border:1px solid var(--line);color:var(--text)}
+.btn-ghost:hover{border-color:var(--accent)}
+
+/* hero */
+.hero{position:relative;padding:110px 0 90px;overflow:hidden;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:-200px 0 auto;height:600px;background:radial-gradient(closest-side,rgba(124,156,255,.18),transparent),radial-gradient(closest-side at 70% 40%,rgba(124,245,196,.12),transparent);z-index:-1}
+.tag{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:6px 14px;margin-bottom:26px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent)}
+h1{font-size:clamp(38px,6.5vw,72px);line-height:1.05;letter-spacing:-.035em;font-weight:800;max-width:880px}
+h1 .g{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{margin-top:24px;font-size:clamp(17px,2vw,20px);color:var(--muted);max-width:680px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:36px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:70px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+.stat b{display:block;font-size:30px;letter-spacing:-.02em}
+.stat span{font-size:13px;color:var(--muted)}
+
+/* sections */
+section{padding:90px 0}
+.eyebrow{font-size:13px;color:var(--accent);letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px}
+h2{font-size:clamp(28px,4vw,42px);letter-spacing:-.03em;line-height:1.15;margin-bottom:18px;max-width:720px}
+.sub{color:var(--muted);max-width:640px;margin-bottom:46px}
+.grid{display:grid;gap:18px}
+.g4{grid-template-columns:repeat(4,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px;transition:.25s}
+.card:hover{border-color:#34405a;transform:translateY(-3px)}
+.card h3{font-size:18px;margin-bottom:8px;letter-spacing:-.01em}
+.card p{color:var(--muted);font-size:15px}
+.num{font-size:13px;color:var(--accent);margin-bottom:14px}
+.icon{width:42px;height:42px;border-radius:11px;display:grid;place-items:center;background:rgba(124,245,196,.08);border:1px solid rgba(124,245,196,.2);margin-bottom:16px;font-size:20px}
+
+/* projects */
+.proj{display:flex;flex-direction:column}
+.proj .head{height:150px;border-radius:12px;margin-bottom:20px;display:grid;place-items:center;font-size:44px;border:1px solid var(--line)}
+.p1 .head{background:linear-gradient(135deg,#1d2a4a,#2b1f45)}
+.p2 .head{background:linear-gradient(135deg,#1f3a33,#1b2b3d)}
+.p3 .head{background:linear-gradient(135deg,#1b2f45,#16303a)}
+.p4 .head{background:linear-gradient(135deg,#3a2a1d,#2d1f3a)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:18px}
+.chip{font-size:12px;color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:4px 10px}
+
+/* timeline */
+.tl{border-left:1px solid var(--line);margin-left:6px}
+.job{position:relative;padding:0 0 42px 30px}
+.job::before{content:"";position:absolute;left:-6px;top:6px;width:11px;height:11px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+.job .when{font-size:13px;color:var(--muted)}
+.job h3{font-size:19px;margin:4px 0 8px}
+.job h3 span{color:var(--muted);font-weight:500}
+.job ul{color:var(--muted);font-size:15px;padding-left:18px}
+.job li{margin-bottom:4px}
+
+/* stack */
+.stack{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.stack .card h4{font-size:13px;color:var(--accent);text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px}
+
+/* quote */
+.quote{background:linear-gradient(135deg,rgba(124,156,255,.08),rgba(124,245,196,.06));border:1px solid var(--line);border-radius:20px;padding:46px;text-align:center}
+.quote p{font-size:clamp(20px,2.6vw,28px);letter-spacing:-.02em;line-height:1.4;max-width:780px;margin:0 auto}
+.stars{color:#ffd166;letter-spacing:4px;margin-bottom:18px}
+.quote small{display:block;margin-top:18px;color:var(--muted)}
+
+/* contact */
+.contact{text-align:center;padding:110px 0}
+.contact h2{margin:0 auto 18px}
+.contact .sub{margin:0 auto 34px}
+.contact .cta{justify-content:center}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:900px){
+  .g4,.stack{grid-template-columns:repeat(2,1fr)}
+  .g3{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .links{display:none}
+}
+@media(max-width:600px){
+  .g4,.g2,.stack{grid-template-columns:1fr}
+  .hero{padding:70px 0 60px}
+  section{padding:64px 0}
+  .quote{padding:30px 22px}
+  nav .btn{padding:9px 14px}
+}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#" class="logo">Gautam<span>.</span></a>
+    <div class="links">
+      <a href="#approach">Approach</a>
+      <a href="#work">Work</a>
+      <a href="#ai">AI</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="btn btn-primary" href="https://www.upwork.com/freelancers/~01976ab7abb14adf9c" target="_blank" rel="noopener">Hire me</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="tag"><span class="dot"></span> Product Lead at Pyxi · Open to new projects</div>
+    <h1>I build products that <span class="g">move the numbers</span>, not just code.</h1>
+    <p class="lead">Hi, I'm Gautam Surani, a product-minded AI &amp; full-stack engineer with 9+ years shipping web, mobile and AI products. I focus on building the right thing: solving your users' real pain point, shipping fast and making it work in the real world.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="https://www.upwork.com/freelancers/~01976ab7abb14adf9c" target="_blank" rel="noopener">Work with me on Upwork →</a>
+      <a class="btn btn-ghost" href="mailto:suranigautam98@gmail.com">suranigautam98@gmail.com</a>
+    </div>
+    <div class="stats">
+      <div class="stat reveal"><b>9+</b><span>Years building software</span></div>
+      <div class="stat reveal"><b>10+</b><span>Android apps launched</span></div>
+      <div class="stat reveal"><b>~40%</b><span>Faster time-to-market</span></div>
+      <div class="stat reveal"><b>5.0★</b><span>Client rating</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="approach">
+  <div class="wrap">
+    <div class="eyebrow mono">How I work</div>
+    <h2>Outcome first. Code second.</h2>
+    <p class="sub">AI tools make writing code fast. The hard part is building something users actually need. That's where I spend my time.</p>
+    <div class="grid g4">
+      <div class="card reveal"><div class="num mono">01</div><h3>Start with the problem</h3><p>Who is the user, what's frustrating them, and what does success look like?</p></div>
+      <div class="card reveal"><div class="num mono">02</div><h3>Agree on the result</h3><p>More bookings, less manual work, faster checkout, happier users. Defined before any code.</p></div>
+      <div class="card reveal"><div class="num mono">03</div><h3>Ship the smallest proof</h3><p>Put a working version in real users' hands, then improve from real feedback.</p></div>
+      <div class="card reveal"><div class="num mono">04</div><h3>Weekly testable builds</h3><p>Builds you can run on your own phone, so you see progress, not status updates.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="work" style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="eyebrow mono">Selected work</div>
+    <h2>Results I've delivered</h2>
+    <p class="sub">From a London social platform to restaurant and warehouse software that replaces manual work.</p>
+    <div class="grid g2">
+      <div class="card proj p1 reveal">
+        <div class="head">🤝</div>
+        <h3>Pyxi — Social Experiences Platform</h3>
+        <p>Joined as a developer, now Product Lead. Turned "people struggle to meet new people" into personality-based group matching, event booking and group chats across web, iOS and Android. Built the Social Pulse engagement score to measure whether members actually connect.</p>
+        <div class="chips"><span class="chip">React</span><span class="chip">React Native</span><span class="chip">Python</span><span class="chip">iOS &amp; Android</span></div>
+      </div>
+      <div class="card proj p2 reveal">
+        <div class="head">🍽️</div>
+        <h3>Restaurant POS &amp; Ordering Suite</h3>
+        <p>Waiter POS, kitchen display system and QR table ordering, so staff spend less time on orders and more time on guests.</p>
+        <div class="chips"><span class="chip">Android</span><span class="chip">KDS</span><span class="chip">QR Ordering</span></div>
+      </div>
+      <div class="card proj p3 reveal">
+        <div class="head">❄️</div>
+        <h3>Cold Storage Warehouse App</h3>
+        <p>A Flutter app, live on Google Play, that replaces manual stock tracking for cold storage warehouses.</p>
+        <div class="chips"><span class="chip">Flutter</span><span class="chip">Google Play</span><span class="chip">Inventory</span></div>
+      </div>
+      <div class="card proj p4 reveal">
+        <div class="head">🔒</div>
+        <h3>Android Kiosk Apps</h3>
+        <p>Ready-to-deploy kiosk apps with Device Owner lockdown for retail, hospitality and self-service use cases.</p>
+        <div class="chips"><span class="chip">Android</span><span class="chip">Kiosk</span><span class="chip">Device Owner</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ai">
+  <div class="wrap">
+    <div class="eyebrow mono">AI engineering</div>
+    <h2>AI that solves a real problem, not AI for show</h2>
+    <p class="sub">Built responsibly: keys secured on the backend, with cost and usage controls.</p>
+    <div class="grid g4">
+      <div class="card reveal"><div class="icon">💬</div><h3>Support assistants</h3><p>Trained on your content to cut repetitive tickets.</p></div>
+      <div class="card reveal"><div class="icon">🔎</div><h3>RAG &amp; agents</h3><p>Search, AI agents and workflow automation that remove manual work.</p></div>
+      <div class="card reveal"><div class="icon">✨</div><h3>Personalisation</h3><p>Matching and recommendations that improve engagement.</p></div>
+      <div class="card reveal"><div class="icon">📄</div><h3>Document AI</h3><p>OCR, extraction and summaries that save hours of data entry.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="stack" style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="eyebrow mono">Toolkit</div>
+    <h2>What I build with</h2>
+    <p class="sub">One person for app, backend, AI and even launch marketing (Meta ads, email), so nothing gets lost between teams.</p>
+    <div class="stack">
+      <div class="card reveal"><h4 class="mono">Mobile</h4><div class="chips" style="padding-top:0"><span class="chip">Flutter</span><span class="chip">React Native</span><span class="chip">Kotlin</span><span class="chip">Java</span></div></div>
+      <div class="card reveal"><h4 class="mono">Web</h4><div class="chips" style="padding-top:0"><span class="chip">React</span><span class="chip">Next.js</span><span class="chip">TypeScript</span></div></div>
+      <div class="card reveal"><h4 class="mono">Backend</h4><div class="chips" style="padding-top:0"><span class="chip">Python / FastAPI</span><span class="chip">Node.js</span><span class="chip">Spring Boot</span></div></div>
+      <div class="card reveal"><h4 class="mono">Data &amp; Cloud</h4><div class="chips" style="padding-top:0"><span class="chip">PostgreSQL</span><span class="chip">Firebase</span><span class="chip">Docker</span><span class="chip">AWS</span><span class="chip">GCP</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="eyebrow mono">Experience</div>
+    <h2>Where I've worked</h2>
+    <p class="sub">B.E. Computer Engineering, Gujarat Technological University.</p>
+    <div class="tl">
+      <div class="job reveal">
+        <div class="when mono">Aug 2024 — Present</div>
+        <h3>Product Lead <span>(prev. Full-Stack Developer) · Pyxi, London</span></h3>
+        <ul>
+          <li>Own product decisions, roadmap, architecture and all structural changes</li>
+          <li>Built the Python backend, React web app and React Native iOS &amp; Android app</li>
+          <li>Shipped personality-based group matching, event discovery &amp; booking, and group chats</li>
+        </ul>
+      </div>
+      <div class="job reveal">
+        <div class="when mono">Mar 2022 — Present</div>
+        <h3>Senior Software Engineer <span>· Promact Infotech</span></h3>
+        <ul>
+          <li>Lead projects end to end: architecture, APIs and production deployment</li>
+          <li>Cross-platform apps in Flutter &amp; React Native; backends in Node.js, FastAPI, Spring Boot</li>
+          <li>Add AI features, from LLM assistants to smart search; mentor junior developers</li>
+        </ul>
+      </div>
+      <div class="job reveal">
+        <div class="when mono">Apr 2017 — Mar 2022</div>
+        <h3>Software Engineer <span>· Fraction Tech</span></h3>
+        <ul>
+          <li>Launched 10+ Android apps, helping clients grow their user base by 30%+</li>
+          <li>Built POS, warehouse, grocery delivery and hotel booking apps</li>
+          <li>Moved projects to Flutter &amp; React Native, cutting time-to-market by ~40%</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="quote reveal">
+      <div class="stars">★★★★★</div>
+      <p>"Gautam was great to work with. Always available to discuss and delivering on time! Highly trustworthy as well!"</p>
+      <small>Upwork client · Back-end developer for a social matching app</small>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact" style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="eyebrow mono">Let's talk</div>
+    <h2>Tell me about your users' problem, not just the features you want.</h2>
+    <p class="sub">I'll reply with a clear plan for solving it, plus a timeline and an estimate.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="https://www.upwork.com/freelancers/~01976ab7abb14adf9c" target="_blank" rel="noopener">Hire me on Upwork</a>
+      <a class="btn btn-ghost" href="mailto:suranigautam98@gmail.com">Email me</a>
+      <a class="btn btn-ghost" href="https://github.com/gautamsurani" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn btn-ghost" href="https://stackoverflow.com/users/9389285/gautam-surani" target="_blank" rel="noopener">Stack Overflow</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="y"></span> Gautam Surani</span>
+    <span>Bhavnagar, India · Working with clients worldwide</span>
+  </div>
+</footer>
+
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
